@@ -1,21 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lsng="ru-RU">
 <head>
-	<title>Вялков Дмитрий Григорьевич. О себе</title>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=980">
-	<link type="text/css" href="/css/style.css" rel="stylesheet"/>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="HandheldFriendly" content="true"/>
+
+	<link type="text/css" href="bower/normalize-css/normalize.css" rel="stylesheet"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/spritesheet.css">
+	<link type="text/css" rel="stylesheet" href="css/about.css">
+
+	<title>Вялков Дмитрий Григорьевич. О себе</title>
+
+	<!--[if lt IE 9]>
+    		<script src="bower/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
  </head>
  <body>
- 	<p>
- 		Работает везде работает? Круто. Мне нравится
- 	</p>
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="/js/jquery.maskedinput.min.js"></script>
-	<script src="/js/jquery.validate.min.js"></script>
-	<script src="/js/jquery.validate.min.js"></script>
- 	<script src="/js/my.js"></script>
+ 	<div class="wrapper">
+ 		<header>
+ 			<div class="header-wrp">
+ 				<h1 class="logo">
+ 					<a href="/"><img src="i/logo.png" alt="Loftschool. От мыслителя к создателю" height="71" width="95"></a>
+ 				</h1>
+ 				<ul class="social">
+ 					<li><a href="https://www.facebook.com/profile.php?id=100005869536136" target="_blank"><i class="ico-facebook spritesheet-preload">Facebook</i></a></li>
+ 					<li><a href="https://vk.com/dmitrygvyalkov" target="_blank"><i class="ico-vk spritesheet-preload">вКонтакте</i></a></li>
+ 					<li><a href="https://twitter.com/" target="_blank"><i class="ico-twitter spritesheet-preload">Twitter</i></a></li>
+ 					<li><a href="https://github.com/dmitrygvyalkov/" target="_blank"><i class="ico-github spritesheet-preload">GitHub</i></a></li>
+ 				</ul>
+ 			</div>
+ 		</header>
+
+	 	<div class="wrp">
+ 			<aside>
+ 				<nav>
+ 					<ul class="nav nav-main">
+ 						<li class="about"><a href="/"><span class="active">Обо мне</span></a></li>
+ 						<li class="portfolio"><a href="portfolio.html"><span>Мои Работы</span></a></li>
+ 						<li class="contact"><a href="contact.html"><span>Обратная связь</span></a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="contacts">
+ 					<h6></h6>
+ 					<ul class="nav nav-contacts">
+ 						<li class="email"><a href="mailto:dima-mav@yandex.ru"><span>dima-mav@yandex.ru</span></a></li>
+ 						<li class="phone"><a href="tel:+380997930508"><span>+380 99 793-05-08</span></a></li>
+ 						<li class="skype"><a href="skype:dmitrygvyalkov"><span>dmitrygvyalkov</span></a></li>
+ 					</ul>
+ 				</div>
+ 			</aside>
+
+ 			<main>	
+				<section class="block-main">
+					<h2 class="header">Основная информация</h2>
+					<img src="userfile//photo.jpg" alt="Дмитрий Вялков" class="photo incircle"> 
+					<p><span class="header">Меня зовут:</span> Дмитрий Вялков</p>
+					<p><span class="header">Мой возраст:</span> 33 года</p>
+					<p><span class="header">Мой город:</span>Донецк, Украина</p>	
+					<p><span class="header">Моя специализация:</span> WEB Developer</p>	
+					<p><span class="header">Ключевые навыки:</span>
+						<ul class="skils">
+							<li><span>PHP</span></li>
+							<li><span>HTML</span></li>
+							<li><span>CSS</span></li>
+							<li><span>JavaScrypt</span></li>
+							<li><span>git</span></li>
+							<li><span>gulp</span></li>
+							<li><span>xml</span></li>
+							<li><span>MySQL</span></li>
+							<li><span>Linux & Unix</span></li>
+						</ul>
+					</p>				
+ 				</section>
+
+ 				<section class="block-main">
+					<h2 class="header">Опыт работы</h2>
+				 	<ul class="list-image-marked">
+				 		<li class="work">
+				 			<span class="info">Фриланс, веб-разработка</span>
+				 			<span class="time"> 2015 — по настоящее время</span>
+				 		</li>
+				 		<li class="work">
+				 			<span class="info">ООО "Донбасс IT", г. Донецк, директор</span>
+				 			<span class="time">2013 — 2014 гг</span>
+				 		</li>
+				 		<li class="work">
+				 			<span class="info">Фриланс, системное администрирование, сети</span>
+				 			<span class="time">2011 — 20013 гг</span>
+				 		</li>
+				 		<li class="work">
+				 			<span class="info">ООО "Марго Групп", г. Донецк, руководитель отдела IT</span>
+				 			<span class="time">2008 — 2011 гг.</span>
+				 		</li>
+				 		<li class="work">
+				 			<span class="info">Туристическая компания "Ника", г. Санкт-Петербург, системный администратор</span>
+				 			<span class="time">2002 — 2007 гг.</span>
+				 		</li>
+				 		<li class="work">
+				 			<span class="info">Газета "Донецк и Дончане", г. Донецк, верстальщик</span>
+				 			<span class="time">1999 — 2002 гг.</span>
+				 		</li>
+				 	</ul>
+ 				</section>
+
+ 				<section class="block-main">
+					<h2 class="header">Образование</h2>
+					 <ul class="list-image-marked">
+					 	<li class="school">
+					 		<span class="info">Полное среднее. ОШ №11 г. Макеевка</span>
+					 		<span class="time">1989 — 1999 гг</span>
+					 	</li>
+					 	<li class="high-school">
+					 		<span class="info">Высшее. Автоматизированные системы управления и сети. ДонНТУ</span>
+					 		<span class="time">1999 — 2006 гг</span>
+					 	</li>
+					 	<li class="courses">
+					 		<span class="info">Курсы Loftschool.ru</span>
+					 		<span class="time">Ноябрь 2015 — по настоящее время</span>
+					 	</li>
+					 </ul>
+ 				</section>
+ 			</main>
+ 		</div>
+ 		<footer>
+ 			<div class="wrp">
+				<div class="login">
+					<a href="login.html"><i class="ico ico-lock"></i></a>
+				</div>
+				<p>&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
+ 			</div>
+ 		</footer>
+ 	</div>
+ 	
+ 	<img src="" data-src="i/spritesheet.png" id="spritesheet" height="0" width="" alt="">
+ 	
+ 	<script src="bower/jquery/jquery.min.js"></script>
+ 	<script src="js/my.js"></script>
  </body>
 </html>
