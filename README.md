@@ -4,4 +4,5 @@
 2. cd site
 3. bower i
 4. npm i
-5. gulp
+5. modernizr -c ./modernizr-config.json -d ./app/js/modernizr.js
+6. gulp

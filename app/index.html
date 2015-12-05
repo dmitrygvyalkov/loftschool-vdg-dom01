@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lsng="ru-RU">
+<html lang="ru-RU" class="no-js">
 <head>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -14,11 +14,10 @@
 	<link type="text/css" rel="stylesheet" href="css/spritesheet.css">
 	<link type="text/css" rel="stylesheet" href="css/about.css">
 
+	<script src="js/modernizr.js"></script>
+
 	<title>Вялков Дмитрий Григорьевич. О себе</title>
 
-	<!--[if lt IE 9]>
-    		<script src="bower/html5shiv/dist/html5shiv.js"></script>
-	<![endif]-->
  </head>
  <body>
  	<div class="wrapper">
@@ -28,59 +27,40 @@
  					<a href="/"><img src="i/logo.png" alt="Loftschool. От мыслителя к создателю" height="71" width="95"></a>
  				</h1>
  				<ul class="social">
- 					<li><a href="https://www.facebook.com/profile.php?id=100005869536136" target="_blank"><i class="ico-facebook spritesheet-preload">Facebook</i></a></li>
- 					<li><a href="https://vk.com/dmitrygvyalkov" target="_blank"><i class="ico-vk spritesheet-preload">вКонтакте</i></a></li>
- 					<li><a href="https://twitter.com/" target="_blank"><i class="ico-twitter spritesheet-preload">Twitter</i></a></li>
- 					<li><a href="https://github.com/dmitrygvyalkov/" target="_blank"><i class="ico-github spritesheet-preload">GitHub</i></a></li>
+ 					<li><a href="https://www.facebook.com/profile.php?id=100005869536136" target="_blank" title="Facebook"><span class="icon-block"><i class="ico ico-facebook">Facebook</i></span></a></li>
+ 					<li><a href="https://vk.com/dmitrygvyalkov" target="_blank" title="вКонтакте"><span class="icon-block"><i class="ico ico-vk">вКонтакте</i></span></a></li>
+ 					<li><a href="https://twitter.com/" target="_blank" title="Twitter"><span class="icon-block"><i class="ico ico-twitter">Twitter</i></span></a></li>
+ 					<li><a href="https://github.com/dmitrygvyalkov/" target="_blank" title="GitHub"><span class="icon-block"><i class="ico ico-github">GitHub</i></span></a></li>
  				</ul>
  			</div>
  		</header>
 
 	 	<div class="wrp">
- 			<aside>
- 				<nav>
- 					<ul class="nav nav-main">
- 						<li class="about"><a href="/"><span class="active">Обо мне</span></a></li>
- 						<li class="portfolio"><a href="portfolio.html"><span>Мои Работы</span></a></li>
- 						<li class="contact"><a href="contact.html"><span>Обратная связь</span></a></li>
- 					</ul>
- 				</nav>
-
- 				<div class="contacts">
- 					<h6></h6>
- 					<ul class="nav nav-contacts">
- 						<li class="email"><a href="mailto:dima-mav@yandex.ru"><span>dima-mav@yandex.ru</span></a></li>
- 						<li class="phone"><a href="tel:+380997930508"><span>+380 99 793-05-08</span></a></li>
- 						<li class="skype"><a href="skype:dmitrygvyalkov"><span>dmitrygvyalkov</span></a></li>
- 					</ul>
- 				</div>
- 			</aside>
-
  			<main>	
 				<section class="block-main">
-					<h2 class="header">Основная информация</h2>
+					<h2 class="title-block">Основная информация</h2>
 					<img src="userfile//photo.jpg" alt="Дмитрий Вялков" class="photo incircle"> 
-					<p><span class="header">Меня зовут:</span> Дмитрий Вялков</p>
-					<p><span class="header">Мой возраст:</span> 33 года</p>
-					<p><span class="header">Мой город:</span>Донецк, Украина</p>	
-					<p><span class="header">Моя специализация:</span> WEB Developer</p>	
-					<p><span class="header">Ключевые навыки:</span>
+					<p><span class="title">Меня зовут:</span> Дмитрий Вялков</p>
+					<p><span class="title">Мой возраст:</span> 33 года</p>
+					<p><span class="title">Мой город:</span>Донецк, Украина</p>	
+					<p><span class="title">Моя специализация:</span> WEB Developer</p>	
+					<p><span class="title">Ключевые навыки:</span>
 						<ul class="skils">
-							<li><span>PHP</span></li>
-							<li><span>HTML</span></li>
-							<li><span>CSS</span></li>
-							<li><span>JavaScrypt</span></li>
-							<li><span>git</span></li>
-							<li><span>gulp</span></li>
-							<li><span>xml</span></li>
-							<li><span>MySQL</span></li>
-							<li><span>Linux & Unix</span></li>
+							<li>PHP</li>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScrypt</li>
+							<li>git</li>
+							<li>gulp</li>
+							<li>xml</li>
+							<li>MySQL</li>
+							<li>Linux & Unix</li>
 						</ul>
 					</p>				
  				</section>
 
  				<section class="block-main">
-					<h2 class="header">Опыт работы</h2>
+					<h2 class="title-block">Опыт работы</h2>
 				 	<ul class="list-image-marked">
 				 		<li class="work">
 				 			<span class="info">Фриланс, веб-разработка</span>
@@ -110,7 +90,7 @@
  				</section>
 
  				<section class="block-main">
-					<h2 class="header">Образование</h2>
+					<h2 class="title-block">Образование</h2>
 					 <ul class="list-image-marked">
 					 	<li class="school">
 					 		<span class="info">Полное среднее. ОШ №11 г. Макеевка</span>
@@ -127,20 +107,36 @@
 					 </ul>
  				</section>
  			</main>
+
+ 			<aside>
+ 				<nav>
+ 					<ul class="nav nav-main">
+ 						<li class="about"><a href="/"><span class="active">Обо мне</span></a></li>
+ 						<li class="portfolio"><a href="portfolio.html"><span>Мои Работы</span></a></li>
+ 						<li class="contact"><a href="contact.html"><span>Обратная связь</span></a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="contacts">
+ 					<h6></h6>
+ 					<ul class="nav nav-contacts">
+ 						<li class="email"><a href="mailto:dima-mav@yandex.ru"><span>dima-mav@yandex.ru</span></a></li>
+ 						<li class="phone"><a href="tel:+380997930508"><span>+380 99 793-05-08</span></a></li>
+ 						<li class="skype"><a href="skype:dmitrygvyalkov"><span>dmitrygvyalkov</span></a></li>
+ 					</ul>
+ 				</div>
+ 			</aside>
  		</div>
  		<footer>
- 			<div class="wrp">
-				<div class="login">
-					<a href="login.html"><i class="ico ico-lock"></i></a>
-				</div>
+			<div class="wrp">
+				<a href="login.html">вход</a>
+				
 				<p>&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
- 			</div>
+			</div>
  		</footer>
  	</div>
  	
- 	<img src="" data-src="i/spritesheet.png" id="spritesheet" height="0" width="" alt="">
- 	
- 	<script src="bower/jquery/jquery.min.js"></script>
+ 	<script src="bower/jquery/dist/jquery.min.js"></script>
  	<script src="js/my.js"></script>
  </body>
 </html>
