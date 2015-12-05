@@ -255,6 +255,7 @@ i {
 	padding-left: 30px;
 	line-height: 53px;
 	height: 55px;
+	color: #727070;
 
 	border-right: 1px solid #b9b9b9;
 	border-left: 1px solid #b9b9b9;
@@ -268,7 +269,7 @@ i {
 	border: none !important;
 }
 
-.nav-main .menu-element:hover {
+.nav-main a .menu-element:hover {
   background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
