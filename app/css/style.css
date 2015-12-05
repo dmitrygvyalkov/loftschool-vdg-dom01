@@ -170,7 +170,8 @@ i {
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
 
 	font-size: 24px;
-	font-weight: 600;
+	font-family: 'Open Sans Semibold';
+	font-weight: normal;
 	padding: 10px 0 0 44px;
 }
 
@@ -217,7 +218,8 @@ i {
 
 .copy {
 	font-size: 12px;
-	font-weight: 200;
+	font-family: 'Open Sans Light';
+	font-weight: normal;
 	text-align: center;
 	padding-top: 10px;
 }
@@ -249,9 +251,10 @@ i {
 	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-
+	
+	font-family: 'Open Sans Semibold';
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: normal;
 	text-decoration: none;
 	padding-left: 30px;
 	line-height: 53px;
@@ -275,6 +278,20 @@ i {
   box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
 
+.no-cssgradients .nav-main .menu-element {
+	background-color: #f7f5f5;
+	background-image: url(../i/bg-menu-element.png);
+}
+
+.no-cssgradients .nav-main .active {
+	background-color: #4cc1a4;
+	background-image: url(../i/bg-menu-element-active.png);
+}
+
+.no-cssgradients .nav-main .menu-element:hover {
+	background-color: #d2d0d0;
+	background-image: url(../i/bg-menu-element-hover.png);
+}
 
 
 .nav-main a {
