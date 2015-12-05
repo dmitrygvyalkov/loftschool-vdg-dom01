@@ -6,6 +6,7 @@
     "setClasses"
   ],
   "feature-detects": [
+    "test/css/backgroundsizecover",
     "test/css/borderradius",
     "test/css/gradients"
   ]
