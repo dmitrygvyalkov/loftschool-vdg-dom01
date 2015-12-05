@@ -62,6 +62,7 @@ i {
 .nav {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 
 .hide-text {
@@ -143,10 +144,6 @@ i {
 	padding-bottom: 60px;
 }
 
-.block-nav {
-	width: 250px;
-	float: left;
-}
 
 .block-section {
 	margin: 36px 0;
@@ -224,3 +221,64 @@ i {
 	text-align: center;
 	padding-top: 10px;
 }
+
+.block-aside {
+	margin-top: 36px;
+	width: 250px;
+	float: left; 
+}
+
+.nav-main {
+	overflow: hidden;
+}
+
+.nav-main .about .menu-element {
+	border-radius: 4px 4px 0 0;
+	border-top: 1px solid #b9b9b9;
+} 
+
+.nav-main .contact .menu-element {
+	border-radius: 0 0 4px 4px;
+	border-bottom: 1px solid #b9b9b9;
+} 
+
+.nav-main .menu-element {
+	display: block;
+	height: 55px;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-left: 30px;
+	line-height: 53px;
+
+	border-right: 1px solid #b9b9b9;
+	border-left: 1px solid #b9b9b9;
+}
+
+.nav-main .active {
+	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(47,161,133,0.6);
+	border: none !important;
+}
+
+.nav-main .menu-element:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+
+
+.nav-main a {
+	text-decoration: none;
+	color: #727070;
+}
+
