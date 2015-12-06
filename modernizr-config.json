@@ -9,6 +9,7 @@
     "test/css/backgroundsizecover",
     "test/css/borderradius",
     "test/css/gradients",
-    "test/forms/placeholder"
+    "test/forms/placeholder",
+    "test/css/rgba"
   ]
 }

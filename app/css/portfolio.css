@@ -1,0 +1,116 @@
+.portfolio-list {
+	list-style-type: none;
+}
+
+.portfolio-list .portfolio-element {
+	display: inline-block;
+	vertical-align: top;
+
+	margin: 0 33px 33px 0;
+
+	border: 1px solid  #bebebe;
+	border-radius: 5px;
+	width: 163px;
+
+	overflow: hidden;
+}
+
+.portfolio-list .tmb {
+	position: relative;
+	width: 163px;
+	height: 119px;
+}
+
+.portfolio-list .tmb:after {
+	content: " ";
+	display: block;
+	width: 163px;
+	height: 119px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	background-color: rgba(128, 128, 128, .4);
+}
+
+.portfolio-list .tmb:hover:after {
+	background-color: rgba(128, 128, 128, 0);
+}
+
+.portfolio-list .url {
+	height: 33px;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Open Sans Semibold';
+	background-color: #f2f2f2;
+}
+
+.portfolio-list .url a {
+	color: #727070;
+	text-decoration: none;
+}
+
+.portfolio-list .url a:hover {
+	text-decoration: underline;
+}
+
+.portfolio-list .desc {
+	font-size: 12px;
+	font-family: 'Open Sans Light';
+	text-align: center;
+	padding: 10px;
+	background-color: #fff;
+}
+
+.portfolio-list .add-new {
+	width: 163px;
+	height: 133px;
+	background-image: -moz-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+}
+
+.portfolio-list .add-new:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+ 
+}
+
+
+.portfolio-list .btn {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	font-family: 'Open Sans Semibold';
+	text-decoration: none;
+	color: #727070;
+	text-align: center;
+	padding: 25px 0 0;
+}
+
+.portfolio-list .btn:before {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 53px;
+    height: 53px;
+    margin-bottom: 11px;
+    background-position: 16px 16px;
+    background-image: url(../i/ico/polaroid-new.png);
+    background-repeat: no-repeat;
+	border-radius: 50%;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.75),inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75);
+}
+
+.portfolio-list a {
+	text-decoration: none;
+	color: #727070;
+}
+
+.no-borderradius .portfolio-list .btn:before {
+	width: 53px;
+    height: 55px;
+    background-position: -104px -118px;
+    background-image: url(../i/spritesheet.png);
+}
