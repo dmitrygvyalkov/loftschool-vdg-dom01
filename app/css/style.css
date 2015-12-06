@@ -73,6 +73,10 @@ i {
 	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
+.last-in-line {
+	margin-right: 0;
+}
+
 
 
 .header-wrp {
@@ -164,6 +168,8 @@ i {
 	border-radius: 5px 5px 0 0;
 	color: rgb(238, 237, 236);
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+
+	
 
 	font-size: 24px;
 	font-family: 'Open Sans Semibold';

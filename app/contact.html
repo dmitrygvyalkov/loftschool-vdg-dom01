@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/spritesheet.css">
-	<link type="text/css" rel="stylesheet" href="css/about.css">
+	<link type="text/css" rel="stylesheet" href="css/contact.css">
 
 	<script src="js/modernizr.js"></script>
 
@@ -30,9 +30,9 @@
  	<div class="wrapper clearfix">
  		<header class="header">
  			<div class="header-wrp">
- 				<h1 class="logo">
+ 				<div class="logo">
  					<a href="/"><img src="i/logo.png" alt="Loftschool. От мыслителя к создателю" height="71" width="95"></a>
- 				</h1>
+ 				</div>
  				<ul class="social">
  					<li><a href="https://www.facebook.com/profile.php?id=100005869536136" target="_blank" title="Facebook"><span class="icon-block"><i class="ico ico-facebook">Facebook</i></span></a></li>
  					<li><a href="https://vk.com/dmitrygvyalkov" target="_blank" title="вКонтакте"><span class="icon-block"><i class="ico ico-vk">вКонтакте</i></span></a></li>
@@ -45,7 +45,36 @@
 	 	<div class="wrp clearfix">
  			<main class="block-main">	
 				<section class="block-section">
-					<h2 class="title-block">Заголовок</h2>			
+					<h1 class="title-block">У вас интересный проект? Напишите мне</h1>
+
+					<div class="block-contact-form clearfix">
+						<form action="#">
+							<div class="form-block col2">
+								<label for="name" class="label">Имя</label>
+								<input type="text" id="name" name="name" class="text-input" placeholder="Как к Вам обращаться">
+							</div>
+							<div class="form-block col2 last-in-line">
+								<label for="email" class="label">Email</label>
+								<input type="text" id="email" name="email" class="text-input" placeholder="Куда мне писать">
+							</div>
+							<div class="col1">
+								<label for="text" class="label">Сообщение</label>
+								<textarea name="text" id="text" cols="30" rows="10" class="textarea" placeholder="Кратко в чем суть"></textarea>
+							</div>
+							<div class="col1">
+								<label for="captcha" class="label">Введите код, указанный на картинке</label>
+								<div class="col2 captcha-img">
+									<img src="tmp/captcha.png" height="77" width="175" alt="">
+								</div>
+								<div class=" col2 last-in-line">
+									<input type="text" id="captcha" name="captcha" class="captcha text-input" placeholder="Введите код">
+								</div>
+								<div class="form-block col2"><input type="submit" class="submit-btn"></div>
+								<div class="form-block col2 last-in-line"><input type="reset" class="reset-btn"></div>
+							</div>
+
+						</form>
+					</div>			
  				</section>
  			</main>
 

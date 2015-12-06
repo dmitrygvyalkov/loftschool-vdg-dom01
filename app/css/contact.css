@@ -1,0 +1,133 @@
+.block-contact-form {
+	max-width: 404px;
+	margin: -5px auto 0;
+	padding-bottom: 20px;
+}
+
+.block-contact-form .form-block {
+	margin: 11px 0;
+}
+
+
+.block-contact-form .label {
+	display: block;
+	font-size: 14px;
+	color: #727070;
+	margin: 10px 0;
+}
+
+.block-contact-form .col2 {
+	display: block;
+	width: 192px;
+	vertical-align: top;
+	margin-right: 19px;
+	box-sizing: content-box;
+	float: left;
+}
+
+.block-contact-form .col1 {
+	width: 100%;
+}
+
+.block-contact-form .last-in-line {
+	margin-right: 0;
+}
+
+.block-contact-form .textarea {
+	width: 100%;
+	height: 183px;
+	border: 1px solid #d6d5d3;
+	font-size: 12px;
+	font-family: 'Open Sans Light';
+	border-radius: 5px;
+	padding: 14px 10px;
+	box-sizing: border-box;
+	background-color: #f9f9fa;
+}
+
+.block-contact-form .captcha-img {
+	height: 79px;
+	border: 1px solid #d6d5d3;
+	font-size: 12px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	background-color: #f9f9fa;
+}
+
+.block-contact-form .captcha-img img {
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+.block-contact-form .text-input {
+	width: 100%;
+	height: 41px;
+	border: 1px solid #d6d5d3;
+	font-size: 12px;
+	font-family: 'Open Sans Light';
+	border-radius: 5px;
+	padding: 12px 10px;
+	box-sizing: border-box;
+	background-color: #f9f9fa;
+}
+
+.block-contact-form .captcha {
+	margin-top: 20px;
+}
+
+.block-contact-form .submit-btn {
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	-moz-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	border: 0;
+	width: 123px;
+	height: 40px;
+	margin: 15px auto;
+	display: block;
+
+	font-family: 'Open Sans Semibold';
+	font-size: 14px;
+	color: rgb(30, 116, 101);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+.block-contact-form .submit-btn:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+
+.block-contact-form .reset-btn {
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	-webkit-box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05), inset 0px 0px 0px 1px rgba(114,112,112,.2);
+	-moz-box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05), inset 0px 0px 0px 1px rgba(114,112,112,.2);
+	box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05), inset 0px 0px 0px 1px rgba(114,112,112,.2);
+	border: 0;
+	width: 123px;
+	height: 40px;
+	margin: 15px auto;
+	display: block;
+
+	font-family: 'Open Sans Semibold';
+	font-size: 14px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+	color: rgb(114, 112, 112);
+}
+
+.block-contact-form .reset-btn:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+}
+
