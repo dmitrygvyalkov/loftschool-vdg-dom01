@@ -8,6 +8,7 @@
   "feature-detects": [
     "test/css/backgroundsizecover",
     "test/css/borderradius",
-    "test/css/gradients"
+    "test/css/gradients",
+    "test/forms/placeholder"
   ]
 }

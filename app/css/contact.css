@@ -131,3 +131,24 @@
 	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 }
 
+.no-cssgradients .block-contact-form .submit-btn {
+	background-color: #7be6cb;
+	background-image: url(../i/bg-submit-btn.png);
+}
+
+.no-cssgradients .block-contact-form .submit-btn:hover {
+	background-color: #40b89a;
+	background-image: url(../i/bg-submit-btn-hover.png);
+	border: 1px solid #57d2b4;
+}
+
+.no-cssgradients .block-contact-form .reset-btn {
+	background-color: #e8e7e7;
+	background-image: url(../i/bg-reset-btn.png);
+	border: 1px solid #dcdbdb;
+}
+
+.no-cssgradients .block-contact-form .reset-btn:hover {
+	background-color: #bfbdbd;
+	background-image: url(../i/bg-reset-btn-hover.png);
+}
