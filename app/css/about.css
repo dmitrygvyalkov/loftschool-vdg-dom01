@@ -159,3 +159,7 @@
   border-radius: 5px;
   box-shadow: 0 1px 0 #b2ddd83
 }
+
+.no-borderradius .about .skils .skil:before, .no-borderradius .about .skils .skil:after{
+	display: none;
+}
