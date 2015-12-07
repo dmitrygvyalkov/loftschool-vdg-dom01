@@ -295,7 +295,7 @@ i {
 	background-image: url(../i/bg-menu-element-active.png);
 }
 
-.no-cssgradients .nav-main .menu-element:hover {
+.no-cssgradients .nav-main a .menu-element:hover {
 	background-color: #d2d0d0;
 	background-image: url(../i/bg-menu-element-hover.png);
 }
