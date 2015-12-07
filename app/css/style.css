@@ -105,7 +105,7 @@ i {
 	color: #343ea3;
 }
 
-.social > li {
+.social .social-element {
 	display: inline-block;
 	background-image: -moz-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -123,11 +123,11 @@ i {
 	border-radius: 50%;
 }
 
-.social > li:first-child {
+.social .social-element:first-child {
 	margin-left: 0;
 }
 
-.no-borderradius .social > li {
+.no-borderradius .social .social-element {
 
 }
 

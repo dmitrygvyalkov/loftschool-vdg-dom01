@@ -1,5 +1,6 @@
 .portfolio-list {
 	list-style-type: none;
+	padding-top: 20px;
 }
 
 .portfolio-list .portfolio-element {
