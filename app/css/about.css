@@ -67,6 +67,7 @@
 .about .info {
 	display: inline-block;
 	vertical-align: top;
+  padding-top: 30px;
 }
 
 .about .title {
