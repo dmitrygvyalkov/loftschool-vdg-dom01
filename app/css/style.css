@@ -202,7 +202,7 @@ i {
 	display: inline-block;
 	width: 24px;
     height: 28px;
-    background-position: -36px -120px;
+    background-position: -5px -53px;
     background-image: url(../i/spritesheet.png);
     background-repeat: no-repeat;
     vertical-align: top;
@@ -214,7 +214,7 @@ i {
 	display: inline-block;
 	width: 24px;
     height: 28px;
-    background-position: -70px -120px;
+    background-position: -163px -53px;
     background-image: url(../i/spritesheet.png);
     background-repeat: no-repeat;
     vertical-align: top;
@@ -358,7 +358,7 @@ i {
 	left: 49px;
 	width: 10px;
     height: 38px;
-    background-position: -254px -5px;
+    background-position: -290px -247px;
     background-image: url(../i/spritesheet.png);
 }
 
@@ -368,7 +368,7 @@ i {
 	background-image: url(../i/spritesheet.png);
 	width: 16px;
     height: 12px;
-    background-position: -248px -53px;
+    background-position: -324px -5px;
     position: absolute;
 	top: 12px;
 	left: 19px;
@@ -380,7 +380,7 @@ i {
 	background-image: url(../i/spritesheet.png);
 	width: 16px;
     height: 21px;
-    background-position: -248px -75px;
+    background-position: -133px -168px;
     position: absolute;
 	top: 10px;
 	left: 19px;
@@ -392,7 +392,7 @@ i {
 	background-image: url(../i/spritesheet.png);
 	width: 19px;
     height: 19px;
-    background-position: -230px -118px;
+    background-position: -294px -168px;
     position: absolute;
 	top: 11px;
 	left: 19px;

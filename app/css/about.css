@@ -31,28 +31,32 @@
 	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.75),inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75);
 }
 
-.block-mywork .work {
-	background-image: url(../i/ico/work-min.png);
+.block-mywork .work:before {
+	background-image: url(../i/spritesheet.png);
 	background-repeat: no-repeat;
-	background-position: 17px 50%;
+	background-position: -227px -233px;
 }
 
-.block-myeducation .school {
-	background-image: url(../i/ico/school-min.png);
+.block-myeducation .school:before {
+	background-image: url(../i/spritesheet.png);
 	background-repeat: no-repeat;
-	background-position: 17px 50%;
+	background-position: -118px -305px;
 }
 
-.block-myeducation .high-school {
-	background-image: url(../i/ico/graduate-min.png);
+.block-myeducation .high-school:before  {
+	background-image: url(../i/spritesheet.png);
 	background-repeat: no-repeat;
-	background-position: 14px 50%;
+	background-position: -276px -53px;
 }
 
-.block-myeducation .courses {
-	background-image: url(../i/ico/file-min.png);
+.block-myeducation .courses:before {
+	background-image: url(../i/spritesheet.png);
 	background-repeat: no-repeat;
-	background-position: 19px 50%;
+	background-position: -211px -5px;
+}
+
+.no-borderradius .block-myeducation .courses:before {
+  background-position: -166px -118px;
 }
 
 .about .photo {
