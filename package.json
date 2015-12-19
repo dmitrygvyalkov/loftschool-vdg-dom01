@@ -2,6 +2,8 @@
   "name": "vdg-dom01",
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-connect-php": "0.0.7",
+    "gulp-mamp": "0.0.4"
   }
 }

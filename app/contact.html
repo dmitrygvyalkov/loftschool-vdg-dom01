@@ -48,18 +48,18 @@
 					<h1 class="title-block">У вас интересный проект? Напишите мне</h1>
 
 					<div class="block-contact-form clearfix">
-						<form action="#">
+						<form action="#" class="form-validator" method="post">
 							<div class="form-block col2">
 								<label for="name" class="label">Имя</label>
-								<input type="text" id="name" name="name" class="text-input" placeholder="Как к Вам обращаться">
+								<input type="text" id="name" name="name" class="text-input" placeholder="Как к Вам обращаться" data-validation-type="text">
 							</div>
 							<div class="form-block col2 last-in-line">
 								<label for="email" class="label">Email</label>
-								<input type="text" id="email" name="email" class="text-input" placeholder="Куда мне писать">
+								<input type="text" id="email" name="email" class="text-input" placeholder="Куда мне писать"  data-validation-type="email">
 							</div>
 							<div class="form-block col1">
 								<label for="text" class="label">Сообщение</label>
-								<textarea name="text" id="text" cols="30" rows="10" class="textarea" placeholder="Кратко в чем суть"></textarea>
+								<textarea name="text" id="text" cols="30" rows="10" class="textarea" placeholder="Кратко в чем суть"  data-validation-type="text"></textarea>
 							</div>
 							<div class="col1 clearfix">
 								<label for="captcha" class="label">Введите код, указанный на картинке</label>
@@ -67,7 +67,7 @@
 									<img src="tmp/captcha.png" height="77" width="175" alt="">
 								</div>
 								<div class=" col2 last-in-line">
-									<input type="text" id="captcha" name="captcha" class="captcha text-input" placeholder="Введите код">
+									<input type="text" id="captcha" name="captcha" class="captcha text-input" placeholder="Введите код"  data-validation-type="text">
 								</div>
 								<div class="form-block col2"><button type="submit" class="submit-btn">Отправить</button></div>
 								<div class="form-block col2 last-in-line"><button type="reset" class="reset-btn">Очистить</button></div>

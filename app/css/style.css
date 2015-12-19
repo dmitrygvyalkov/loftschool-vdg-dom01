@@ -422,3 +422,7 @@ i {
 	background-image: url(../i/bg-contacts-title.png);
 	background-repeat: repeat-x;
 }
+
+.block-contact-form .validator-error {
+	border: 2px solid #eec9c0 !important;
+}
