@@ -26,14 +26,13 @@
 			parentBlock.append('<div class="vdg-tooltip-block"></div>');
 			var tooltipElement = parentBlock.find(".vdg-tooltip-block");
 			var data = $(this).data("tooltip");
-			data.tooltipElement = tooltipElement;
 			var location = data.location;
 			if ($(this).attr("data-tooltip-location")) {
 				location = $(this).attr("data-tooltip-location");
 				data.location = location;
 			}
-			
-
+			tooltipElement.addClass(location);
+			data.tooltipElement = tooltipElement;
 			$(this).data("tooltip" , data);
 			
 		});
