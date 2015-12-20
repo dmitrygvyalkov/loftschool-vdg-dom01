@@ -50,15 +50,15 @@
 
 					<div class="block-contact-form clearfix">
 						<form action="#" class="form-validator" method="post">
-							<div class="form-block col2 input-container">
+							<div class="form-block col2">
 								<label for="name" class="label">Имя</label>
 								<input type="text" id="contacts-name" name="name" class="text-input vdg-tooltip" placeholder="Как к Вам обращаться" data-validation-type="text">
 							</div>
-							<div class="form-block col2 last-in-line input-container">
+							<div class="form-block col2 last-in-line">
 								<label for="email" class="label">Email</label>
-								<input type="text" id="contacts-email" name="email" class="text-input vdg-tooltip" placeholder="Куда мне писать"  data-validation-type="email">
+								<input type="text" id="contacts-email" name="email" class="text-input vdg-tooltip" placeholder="Куда мне писать"  data-validation-type="email" data-tooltip-location="right">
 							</div>
-							<div class="form-block col1 input-container">
+							<div class="form-block col1">
 								<label for="text" class="label">Сообщение</label>
 								<textarea name="text" id="contacts-text" cols="30" rows="10" class="textarea" placeholder="Кратко в чем суть"  data-validation-type="text"></textarea>
 							</div>
@@ -67,8 +67,8 @@
 								<div class="col2 captcha-img">
 									<img src="tmp/captcha.png" height="77" width="175" alt="">
 								</div>
-								<div class=" col2 last-in-line input-container">
-									<input type="text" id="contacts-captcha" name="captcha" class="captcha text-input" placeholder="Введите код"  data-validation-type="text">
+								<div class=" col2 last-in-line">
+									<div class="captcha"><input type="text" id="contacts-captcha" name="captcha" class="text-input" placeholder="Введите код"  data-validation-type="text"  data-tooltip-location="right"></div>
 								</div>
 								<div class="form-block col2"><button type="submit" class="submit-btn">Отправить</button></div>
 								<div class="form-block col2 last-in-line"><button type="reset" class="reset-btn">Очистить</button></div>

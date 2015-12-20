@@ -1,16 +1,9 @@
-.input-container {
-	position: relative;
-	top: 0;
-	left: 0;
-}
-
 .vdg-tooltip-block {
 	position: absolute;
-	right: 0px;
-	top: 0px;
-	max-width: 200px;
+	max-width: 100px;
 	background-color: #ec9b7e;
 	color: #7f1d00;
 	font-size: 12px;
 	padding: 4px;
+	display: none;
 }
