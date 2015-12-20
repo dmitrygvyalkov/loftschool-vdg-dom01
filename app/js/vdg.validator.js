@@ -30,12 +30,14 @@ function validator(forms) {
 		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
-				.attr("validator-status", "no-text-content");
+				.attr("validator-status", "no-text-content")
+				.tooltip("show")
 				;
 		} else {
 			$(validateElement)
 				.removeClass("validator-error")
 				.removeAttr("validator-status")
+				.tooltip("hide")
 				;
 		}
 	}
@@ -46,17 +48,20 @@ function validator(forms) {
 		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
-				.attr("validator-status", "no-text-content");
+				.attr("validator-status", "no-text-content")
+				.tooltip("show")
 				;
 		} else if (!mailText.test(validateElement.value)) { // Текст не соответствует формату эл. почты
 			$(validateElement)
 				.addClass("validator-error")
-				.attr("validator-status", "format-error");
+				.attr("validator-status", "format-error")
+				.tooltip("show")
 				;
 		} else {
 			$(validateElement)
 				.removeClass("validator-error")
 				.removeAttr("validator-status")
+				.tooltip("hide")
 				;
 		}
 	}
