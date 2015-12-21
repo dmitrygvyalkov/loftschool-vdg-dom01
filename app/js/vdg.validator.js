@@ -21,12 +21,26 @@ function validator(forms) {
 			case "email":
 				_validateFuncEmail(validateElement);
 				break;
+			case "file":
+				_validateFuncFile(validateElement);
 			default: // по-умолчанию валидируем как текстовое поле
 				_validateFuncText(validateElement);
 		}
 	}
 
 	function _validateFuncText(validateElement) {
+		if ($(validateElement).attr("type") === "file") {
+			// Валидируем элемент загрузки
+			if (!$(validateElement).value) {
+				$(validateElement).parent()
+					.addClass("validator-error");
+			}
+			else {
+				$(validateElement).parent()
+					.removeClass("validator-error");
+			}
+
+		}
 		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
@@ -38,6 +52,31 @@ function validator(forms) {
 				.removeClass("validator-error")
 				.removeAttr("validator-status")
 				.tooltip("hide")
+				;
+		}
+	}
+
+	function _validateFuncFile(validateElement) {
+		if (!validateElement.value) { // Элемент пустой
+			$(validateElement)
+				.addClass("validator-error")
+				.removeClass("no-error")
+				.attr("validator-status", "no-text-content")
+				.tooltip("show")
+				;
+
+			$(validateElement).parent()
+				.addClass("validator-error")
+				;
+		} else {
+			$(validateElement)
+				.removeClass("validator-error")
+				.addClass("no-error")
+				.removeAttr("validator-status")
+				.tooltip("hide")
+				;
+			$(validateElement).parent()[0]
+				.removeClass("validator-error")
 				;
 		}
 	}
