@@ -85,10 +85,15 @@ $(document).ready(function() {
 		    }						
 		    var filename = event.target.value.slice(i);	
 
-		    $(event.target).parent().find(".placeholder")
+		    var fileUploadInput = $(event.target);
+		    var placeholderElement = fileUploadInput.parent().find(".placeholder")[0];
+
+		    $(placeholderElement)
 		    	.removeClass("no-file")
 		    	.addClass("file-selected")
-		    	.html(filename);
+		    	;
+		    $(placeholderElement).text(filename); // В этой строке ошибка 
+		    console.log(placeholderElement);
      	});
 
      })();
