@@ -1,6 +1,18 @@
 'use strict';
 
 $(document).ready(function() { 
+	// Описываем тексты для тултипов
+	var tooltipsText = { 
+			"contacts-name"	: {
+				"no-text-content"	: "введите имя"
+			},
+
+			"contacts-email"		: {
+				"no-text-content"	: "введите email",
+				"format-error"		: "введен некоректный адрес"
+			}
+
+		};
 
 	// Загружаем поддержку плейсхолдеров в старых браузерах
 	if (!Modernizr.placeholder) {
@@ -85,6 +97,7 @@ $(document).ready(function() {
 		    }						
 		    var filename = event.target.value.slice(i);	
 
+		    console.log(filename);
 		    $(event.target).parent().find(".placeholder")
 		    	.removeClass("no-file")
 		    	.addClass("file-selected")

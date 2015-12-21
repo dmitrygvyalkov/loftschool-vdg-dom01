@@ -29,9 +29,7 @@ function validator(forms) {
 	}
 
 	function _validateFuncText(validateElement) {
-		var elementVal = (validateElement.value === $(validateElement).attr("placeholder")) ?
-						"" : validateElement.value;
-		if (!elementVal) { // Элемент пустой
+		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
 				.attr("validator-status", "no-text-content")
@@ -47,9 +45,7 @@ function validator(forms) {
 	}
 
 	function _validateFuncFile(validateElement) {
-		var elementVal = (validateElement.value === $(validateElement).attr("placeholder")) ?
-						"" : validateElement.value;
-		if (!elementVal) { // Элемент пустой
+		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
 				.removeClass("no-error")
@@ -61,7 +57,6 @@ function validator(forms) {
 				.addClass("validator-error")
 				;
 		} else {
-			console.log("Убираем оформление и тултипсы");
 			$(validateElement)
 				.removeClass("validator-error")
 				.addClass("no-error")
@@ -69,7 +64,7 @@ function validator(forms) {
 				.tooltip("hide")
 				;
 			$(validateElement)
-				.parent() // .parent()[0]
+				.parent()[0]
 				.removeClass("validator-error")
 				;
 		}
@@ -77,12 +72,8 @@ function validator(forms) {
 
 	function _validateFuncEmail(validateElement) {
 		var mailText = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-		
-		// Получаем значение поля, с учетом 
-		var elementVal = (validateElement.value === $(validateElement).attr("placeholder")) ?
-						"" : validateElement.value;
 
-		if (!elementVal) { // Элемент пустой
+		if (!validateElement.value) { // Элемент пустой
 			$(validateElement)
 				.addClass("validator-error")
 				.attr("validator-status", "no-text-content")
