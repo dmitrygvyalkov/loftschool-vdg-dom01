@@ -82,4 +82,28 @@ $(document).ready(function() {
              );
      });
 
+
+     // обработчик выбора файла для загрузки
+
+     (function(){
+     	$(".file-upload-input").change(function(event){
+     		
+     		// получаем имя файла
+     		if (event.target.value.lastIndexOf('\\')){
+		        var i = event.target.value.lastIndexOf('\\')+1;
+		    }
+		    else{
+		        var i = event.target.value.lastIndexOf('/')+1;
+		    }						
+		    var filename = event.target.value.slice(i);	
+
+		    console.log(filename);
+		    $(event.target).parent().find(".placeholder")
+		    	.removeClass("no-file")
+		    	.addClass("file-selected")
+		    	.html(filename);
+     	});
+
+     })();
+
 });

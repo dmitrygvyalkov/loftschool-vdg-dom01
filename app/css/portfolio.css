@@ -173,6 +173,20 @@
 	z-index: 2001;
 }
 
+.file-upload-input-container .placeholder {
+	padding: 12px 10px;
+	position: absolute;
+	font-size: 12px;
+}
+
+.file-upload-input-container .placeholder.no-file {
+	color: #bbb;
+}
+
+.file-upload-input-container .placeholder.file-selected {
+	color: #000;
+}
+
 .file-upload-input-container .file-upload-input {
 	-moz-opacity: 0; 
     filter: alpha(opacity=0); 
