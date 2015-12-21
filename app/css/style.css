@@ -423,7 +423,7 @@ i {
 	background-repeat: repeat-x;
 }
 
-.block-contact-form .validator-error {
+.validator-error {
 	border: 2px solid #eec9c0 !important;
 }
 

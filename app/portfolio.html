@@ -20,6 +20,7 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/spritesheet.css">
 	<link type="text/css" rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltips.css">
 
 	<script src="js/modernizr.js"></script>
 
@@ -68,7 +69,7 @@
 							<div class="desc">Сайт спа-салона «Лотос»</div>
 						</li>	
 						<li class="portfolio-element add-new">
-							<a href="#"><div class="btn">Добавить проект</div></a>
+							<a href="#" class="open_modal add-project" data-formname="#modal1"><div class="btn">Добавить проект</div></a>
 						</li>	
 					</ul>
  				</section>
@@ -102,6 +103,35 @@
 		</footer>
  	</div>
  	
+ 	<div id="modal1" class="modal_div">
+ 		<div class="title">Добавление проекта</div>
+		<span class="modal_close ico ico-close-form"></span>
+		<div class="content">
+			<form action="#" class="form-validator" method="post">
+				<div class="form-block">
+					<label for="portfolio-project-name" class="label">Название проекта</label>
+					<input type="text" id="portfolio-project-name" name="project-name" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Введите название">
+				</div>
+				<div class="form-block">
+					<label for="img" class="label">Картинка проекта</label>
+					<input type="file" id="portfolio" name="img" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Загрузите изображение">
+				</div>
+				<div class="form-block">
+					<label for="url" class="label">URL проекта</label>
+					<input type="text" id="portfolio" name="url" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Добавьте ссылку">
+				</div>
+				<div class="form-block">
+					<label for="description" class="label">Описание</label>
+					<textarea type="" id="portfolio" name="description" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Пара слов о вашем проекте"></textarea>
+				</div>
+				<div class="form-block">
+					<button type="submit" class="btn">Добавить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="overlay"></div>
+
  	<script src="bower/jquery/dist/jquery.min.js"></script>
  	<script src="js/my.js"></script>
  </body>

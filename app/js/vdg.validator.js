@@ -83,10 +83,21 @@ function validator(forms) {
 			_validate(event.target);
 		});
 	});
+
+	var resetAllInputs = (function() {
+		$(inputs)
+			.removeClass("validator-error") // Очищаем статус ошибки
+			.removeAttr("validator-status") // Ощищаем тип ошибки
+		;
+		$.each(inputs, function(key, value) {
+			$(value).tooltip("hide");
+		});
+	});
 	// Возвращаем публичные методы для работы с модулем
 
 	return {
-		echoLog			: fnEcho,
+		echoLog				: fnEcho,
+		resetAllInputs		: resetAllInputs,
 	  	validateAllInputs	: validateAllInputs
 	};
 

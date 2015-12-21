@@ -81,9 +81,6 @@
 		} else {
 			tooltipText = tooltipTextObj["default"];
 		}
-		console.log("ID: " + $(this).attr("id"));
-		console.log("errorFormat: " + errorFormat);
-		console.log("tooltipText: " + tooltipText);
 		data.tooltipElement.html(tooltipText);
 		methods.reposition.apply( this, arguments );
 		data.tooltipElement.show();

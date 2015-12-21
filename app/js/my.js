@@ -38,13 +38,48 @@ $(document).ready(function() {
 	}
 
 	// Обработчик собтия сабмита форм, на который вешаем и валидатор
+	var formValidator;
 	forms.submit(function(event) {
 		event.preventDefault(); // Отключаем сабмит
-		var formValidator = new validator($(this));
+		if (!formValidator) {
+			formValidator = new validator($(this));
+		}
 		formValidator.validateAllInputs();
 	});
 
-	// Обработчик тултипов
+	// Навешиваем обработку клика по кнопке сброса
+	forms.find("[type=reset]")
+		.click(function() {
+			if (formValidator) {
+				formValidator.resetAllInputs();
+			};
+		});
 
+	// модальное окно
+	var overlay = $('#overlay');
+    var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
+    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
+
+     open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
+         event.preventDefault(); // вырубaем стaндaртнoе пoведение
+         var div = $(this).attr('data-formname'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+         overlay.fadeIn(400, //пoкaзывaем oверлэй
+             function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
+                 $(div) // берем стрoку с селектoрoм и делaем из нее jquery oбъект
+                     .css('display', 'block') 
+                     .animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+         });
+     });
+
+     close.click( function(){ // лoвим клик пo крестику или oверлэю
+            modal // все мoдaльные oкнa
+             .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+                 function(){ // пoсле этoгo
+                     $(this).css('display', 'none');
+                     overlay.fadeOut(400); // прячем пoдлoжку
+                 }
+             );
+     });
 
 });
