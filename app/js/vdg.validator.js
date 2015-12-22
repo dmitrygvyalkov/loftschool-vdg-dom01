@@ -61,7 +61,6 @@ function validator(forms) {
 				.addClass("validator-error")
 				;
 		} else {
-			console.log("Убираем оформление и тултипсы");
 			$(validateElement)
 				.removeClass("validator-error")
 				.addClass("no-error")
