@@ -23,6 +23,11 @@ $(document).ready(function() {
 		tooltipScriptLoader.type='text/javascript';
 		tooltipScriptLoader.src = 'js/vdg.tooltips.js';
 		document.body.appendChild(tooltipScriptLoader);
+		// также загружаем модуль тултипов
+		var submitFormScriptLoader=document.createElement('script');
+		submitFormScriptLoader.type='text/javascript';
+		submitFormScriptLoader.src = 'js/vdg.submitformajax.js';
+		document.body.appendChild(submitFormScriptLoader);
 	}
 
 	// Обработчик собтия сабмита форм, на который вешаем и валидатор
@@ -33,6 +38,15 @@ $(document).ready(function() {
 			formValidator = new validator($(this));
 		}
 		formValidator.validateAllInputs();
+		// Проверка на наличие ошибок валидации
+		console.log();
+		if (!$(this).find(".validator-error").length) {
+			vdgSubmitFormAjax($(this), {
+				ajax : {
+					url: "php/mailer.php"
+				}
+			});
+		}
 	});
 
 	// Навешиваем обработку клика по кнопке сброса

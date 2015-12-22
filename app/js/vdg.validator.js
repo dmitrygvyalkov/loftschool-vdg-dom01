@@ -9,11 +9,6 @@ function validator(forms) {
 
 	// Приватные методы, вся работа должна быть описана в этом блоке
 
-	function _fnEcho() {
-		console.log(text);
-		alert(text);
-	}
-
 	function _validate(validateElement) {
 		var validationType = $(validateElement).attr("data-validation-type");
 		var validationFunctionName = "_validateFunc_" + validationType;
@@ -104,10 +99,6 @@ function validator(forms) {
 
 	// Описываем публичные методы
 
-	var fnEcho = (function() {
-		_fnEcho();
-	});
-
 	var validateAllInputs = (function() {
 		$.each(inputs, function(key, value) {
 			_validate(value);
@@ -132,7 +123,6 @@ function validator(forms) {
 	// Возвращаем публичные методы для работы с модулем
 
 	return {
-		echoLog				: fnEcho,
 		resetAllInputs		: resetAllInputs,
 	  	validateAllInputs	: validateAllInputs
 	};
