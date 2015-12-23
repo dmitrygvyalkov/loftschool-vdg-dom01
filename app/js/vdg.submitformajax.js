@@ -26,6 +26,7 @@ function vdgSubmitFormAjax(formObj, options) {
 
 	handlerFunctions = {
 		success: function(data) {
+			console.log("Запрос по почте отправлен");
 			console.log(data);
 		},
 		error: function() {
