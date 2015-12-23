@@ -8,12 +8,12 @@ function vdgSubmitFormAjax(formObj, options) {
 		, result = false// результат работы
 		;
 
-
+	console.log(formObj.attr("action"));
 	// Настройки отправщика
 	var settings = {
 						success: "success",
 						ajax: {
-							url: "send.php",
+							url: formObj.attr("action"),
 							type: "post",
 							cache: false
 						}	

@@ -66,7 +66,7 @@ $mail->addAddress($__config["destination"], $__config["destinationName"]);
 $mail->Subject = $__config["contactForm"]["subjectMail"];
 $mail->Body = "Поступил запрос с формы обратной связи\n\n"
 				. "Имя: " . $name . "\n"
-				. "Email: " $email . "\n\n"
+				. "Email: " . $email . "\n\n"
 				. "Тект сообщения:\n" . $message . "\n"
 				;
 

@@ -43,7 +43,7 @@ $(document).ready(function() {
 		if (!$(this).find(".validator-error").length) {
 			vdgSubmitFormAjax($(this), {
 				ajax : {
-					url: "php/mailer.php"
+					// url: "php/mailer.php"
 				}
 			});
 		}
