@@ -19,6 +19,7 @@ if (!$name) {
     			'errorType' => 'validation',
     			'errorData' => "Пустое имя"
     		), JSON_FORCE_OBJECT );
+	exit();
 }
 
 if (!$email) {
@@ -27,6 +28,7 @@ if (!$email) {
     			'errorType' => 'validation',
     			'errorData' => "Пустое поле Email"
     		), JSON_FORCE_OBJECT );
+	exit();
 } else {
 	// проверяем Email на шаблон
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -35,6 +37,7 @@ if (!$email) {
 	    			'errorType' => 'validation',
 	    			'errorData' => "Email не соответствует формату"
     			), JSON_FORCE_OBJECT );
+		exit();
 	}
 }
 
@@ -44,6 +47,7 @@ if (!$message) {
     			'errorType' => 'validation',
     			'errorData' => "Нет текста сообщения"
     		), JSON_FORCE_OBJECT );
+	exit();
 }
 
 $mail = new PHPMailer;

@@ -41,11 +41,31 @@ $(document).ready(function() {
 		// Проверка на наличие ошибок валидации
 		console.log();
 		if (!$(this).find(".validator-error").length) {
-			vdgSubmitFormAjax($(this), {
-				ajax : {
-					// url: "php/mailer.php"
+			var submitResult = vdgSubmitFormAjax($(this),
+				{
+					success: function(data) {
+						console.log(data.status);
+						if (data.status === "success") {
+							// Все отлично, форма отправлена и успешно обработана
+							console.log("Все отлично, форма отправлена и успешно обработана");
+							buildInfoWindow("submit-ok", '<div class="title">Спасибо!</div>Мы обязательно свяжемся с вами');
+						} else {
+							// Что-то пошло не так, выводим сообщение об ошибке
+							console.log("Что-то пошло не так, выводим сообщение об ошибке");
+							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>Невозможно отправить сообщение. '
+								+ "Попробуйте позже");
+						}
+					},
+					error: function() {
+						console.log("Что-то пошло не так");
+					}
+				},
+				{
+					ajax : {
+						// url: "php/mailer.php"
+					}
 				}
-			});
+			);
 		}
 	});
 
@@ -84,6 +104,24 @@ $(document).ready(function() {
              );
      });
 
+	// Создание модального окна
+	function buildInfoWindow(windowClasses, htmlText, windowContainer) {
+		
+		var windowHtml = '<div class="window-info-box '+ windowClasses +'">'
+			+ '<div class="window-close ico ico-close-form">X</div>'
+			+ '<div class="content">' + htmlText + '</div>'
+			+ '</div>';
+
+		if (windowContainer) {
+			windowContainer.append(windowHtml);
+		} else {
+			$("body").append(windowHtml);
+		};
+
+		$(".window-info-box .window-close").click(function(event) {
+			$(this).parent().remove();
+		});
+	};
 
      // обработчик выбора файла для загрузки
 

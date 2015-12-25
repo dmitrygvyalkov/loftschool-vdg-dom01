@@ -431,3 +431,39 @@ i {
 	border: 2px solid #eec9c0 !important;
 }
 
+.window-info-box {
+	background-color: #fff;
+	padding: 25px;
+	font-size: 14px;
+	border-radius: 8px;
+}
+
+.window-info-box .title {
+	font-size: 17px;
+}
+
+.window-info-box .window-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	overflow: hidden;
+	text-indent: 9999px;
+	cursor: pointer;
+}
+
+.window-info-box.submit-ok {
+	background-color: #bde2cc;
+	color: #49bb7b;
+	border: 1px solid #49bb7b;
+}
+
+body > .window-info-box {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -150px;
+	width: 300px;
+	box-sizing: border-box;
+	z-index: 100;
+}
