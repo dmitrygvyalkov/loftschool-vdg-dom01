@@ -5,10 +5,12 @@
 	var tooltipTexts = {
 		"no-text-content": {
 			"default": "заполните поле",
-			"contacts-name"		: "введите имя",
-			"contacts-email"	: "введите email",
-			"contacts-captcha"	: "код капчи",
-			"contacts-text"		: "ваш вопрос"
+			"contacts-name"		: "введите&nbsp;имя",
+			"contacts-email"	: "введите&nbsp;email",
+			"contacts-captcha"	: "код&nbsp;капчи",
+			"contacts-text"		: "ваш&nbsp;вопрос",
+			"login-email"		: "введите&nbsp;email",
+			"login-password"	: "введите&nbsp;пароль"
 		},
 		"format-error": {
 			"default": "неверный формат",

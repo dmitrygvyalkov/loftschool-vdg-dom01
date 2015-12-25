@@ -15,6 +15,7 @@ function vdgSubmitFormAjax(formObj, handlerFunctions, options) {
 							url: formObj.attr("action"),
 							type: "post",
 							dataType: "json",
+							async: true,
 							cache: false
 						}	
 					};

@@ -39,19 +39,21 @@ $(document).ready(function() {
 		}
 		formValidator.validateAllInputs();
 		// Проверка на наличие ошибок валидации
-		console.log();
 		if (!$(this).find(".validator-error").length) {
-			var submitResult = vdgSubmitFormAjax($(this),
+			vdgSubmitFormAjax($(this),
 				{
 					success: function(data) {
-						console.log(data.status);
-						if (data.status === "success") {
+							if (data.status === "success") {
 							// Все отлично, форма отправлена и успешно обработана
-							console.log("Все отлично, форма отправлена и успешно обработана");
 							buildInfoWindow("submit-ok", '<div class="title">Спасибо!</div>Мы обязательно свяжемся с вами');
+							// Очищаем поля формы
+							var inputs = $(".text-input, .textarea");
+							$.each(inputs, function(key, value) {
+								console.log(value);
+								value.value = "";
+							})
 						} else {
 							// Что-то пошло не так, выводим сообщение об ошибке
-							console.log("Что-то пошло не так, выводим сообщение об ошибке");
 							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>'
 								+ data.errorData);
 						}

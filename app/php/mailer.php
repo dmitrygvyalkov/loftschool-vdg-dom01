@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Загружаем библиотеки
 require($__config["libsPath"] . './libs/phpmailer/phpmailer/PHPMailerAutoload.php');
 

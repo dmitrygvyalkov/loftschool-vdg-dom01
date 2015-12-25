@@ -4,6 +4,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "jquery": "~1",
     "modernizr": "~3.2.0",
-    "jquery.placeholder": "~0.2.4"
+    "jquery.placeholder": "~0.2.4",
+    "blueimp-file-upload": "jquery-file-upload#~9.11.2"
   }
 }
