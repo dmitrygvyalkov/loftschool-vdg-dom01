@@ -12,6 +12,14 @@ $name = htmlentities(trim($_POST["name"]), ENT_QUOTES, "UTF-8");
 $email = htmlentities(trim($_POST["email"]), ENT_QUOTES, "UTF-8");
 $message = htmlentities(trim($_POST["text"]), ENT_QUOTES, "UTF-8");
 
+if ($_SESSION["captcha"] != $_POST["captcha"]) {
+    echo json_encode( array(
+                'status' => 'error',
+                'errorType' => 'validation',
+                'errorData' => "Неверный код Каптчи"
+            ), JSON_FORCE_OBJECT );
+    exit();
+}
 
 if (!$name) {
 	echo json_encode( array(

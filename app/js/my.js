@@ -52,12 +52,13 @@ $(document).ready(function() {
 						} else {
 							// Что-то пошло не так, выводим сообщение об ошибке
 							console.log("Что-то пошло не так, выводим сообщение об ошибке");
-							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>Невозможно отправить сообщение. '
-								+ "Попробуйте позже");
+							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>'
+								+ data.errorData);
 						}
 					},
 					error: function() {
-						console.log("Что-то пошло не так");
+						buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>Невозможно отправить сообщение. '
+								+ "Попробуйте позже");
 					}
 				},
 				{
@@ -107,10 +108,15 @@ $(document).ready(function() {
 	// Создание модального окна
 	function buildInfoWindow(windowClasses, htmlText, windowContainer) {
 		
-		var windowHtml = '<div class="window-info-box '+ windowClasses +'">'
-			+ '<div class="window-close ico ico-close-form">X</div>'
-			+ '<div class="content">' + htmlText + '</div>'
-			+ '</div>';
+		var windowHtml = '<div class="window-info-box '+ windowClasses +'">';
+
+		if (windowClasses === "submit-error") {
+			windowHtml += '<div class="window-close ico ico-close-error">X</div>';
+		} else {
+			windowHtml += '<div class="window-close ico ico-close-form">X</div>';
+		}
+
+		windowHtml += '<div class="content">' + htmlText + '</div></div>';
 
 		if (windowContainer) {
 			windowContainer.append(windowHtml);

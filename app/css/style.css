@@ -451,10 +451,17 @@ i {
 	cursor: pointer;
 }
 
+
 .window-info-box.submit-ok {
 	background-color: #bde2cc;
 	color: #49bb7b;
 	border: 1px solid #49bb7b;
+}
+
+.window-info-box.submit-error {
+	background-color: #e9c8bc;
+	color: #cd7150;
+	border: 1px solid #cd7150;
 }
 
 body > .window-info-box {
