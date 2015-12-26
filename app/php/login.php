@@ -4,6 +4,18 @@ session_start();
 // Грузим конфиг
 include("./config.php");
 
+if (isset($_GET["getstatus"])) {
+	if ($_SESSION["adminAutorized"]) {
+		$adminAutorized = "admin";
+	} else {
+		$adminAutorized = "user";
+	}
+	echo json_encode( array(
+                'userType' => $adminAutorized
+            ), JSON_FORCE_OBJECT );
+    exit();
+}
+
 $email = $_POST["email"];
 $password = md5($_POST["password"]);
 

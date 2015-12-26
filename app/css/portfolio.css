@@ -65,11 +65,16 @@
 }
 
 .portfolio-list .add-new {
+	display: none;
 	width: 163px;
 	height: 133px;
 	background-image: -moz-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+}
+
+.user-type-admin .portfolio-list .add-new {
+	display: inline-block;
 }
 
 .portfolio-list .add-new:hover {

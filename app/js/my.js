@@ -30,6 +30,21 @@ $(document).ready(function() {
 		document.body.appendChild(submitFormScriptLoader);
 	}
 
+	// Скрываем кнопку добавления проектов неавторизированным пользователям
+	// Для этого устанавливаем статусный класс html элементу
+	
+	var ajaxQuery = {
+			type: "get",
+			url: "/php/login.php?getstatus",
+			dataType: "json",
+			async: true,
+			cache: false,
+			success: function(data) {
+				$("html").addClass("user-type-" + data.userType);
+			}
+		};
+	$.ajax(ajaxQuery);
+
 	// Обработчик собтия сабмита форм, на который вешаем и валидатор
 	var formValidator;
 	var contactForm 	= $("#contact-form"),
