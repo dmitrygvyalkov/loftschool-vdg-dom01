@@ -52,6 +52,82 @@ $(document).ready(function() {
 		portfolioForm	= $("#portfolioForm")
 		;
 
+
+
+	$('#portfolio-img').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+        	console.log("Закончилась загрузка файла");
+        },
+
+        add: function(e, data) {
+        	$(e.target).siblings(".placeholder")
+        					.html(data.files[0].name)
+        					.removeClass("no-file");
+        	$("html").data("upload-filename", data.files[0].name);
+        	$(e.target).keyup();
+        },
+
+        progressall: function (e, data) {
+	        var progress = parseInt(data.loaded / data.total * 100, 10);
+	        console.log("Загрузка файла " + progress);
+	        
+	        $('#progress .bar').css(
+	            'width',
+	            progress + '%'
+	        );
+	    }
+    });
+
+	portfolioForm.submit(function(event) {
+		event.preventDefault(); // Отключаем сабмит
+		if (!formValidator) {
+			formValidator = new validator($(this));
+		}
+		formValidator.validateAllInputs();
+
+		// Проверка на наличие ошибок валидации
+		if (!$(this).find(".validator-error").length) {
+			vdgSubmitFormAjax($(this),
+				{
+					success: function(data) {
+							if (data.status === "success") {
+							// Все отлично, форма отправлена и успешно обработана
+							buildInfoWindow("submit-ok", '<div class="title">Поздравляем!</div>'
+													+ 'Вы вошли как администратор'
+													+ 'Если вас не перенаправит на сайт '
+													+ '<a href="/">Перейдите по ссылке</a>');
+							// Очищаем поля формы
+							var inputs = $(".text-input, .textarea");
+							$.each(inputs, function(key, value) {
+								console.log(value);
+								value.value = "";
+							});
+
+							// Перебрасываем на главную
+							window.setTimeout(function() {
+								$(location).attr('href',"/");
+							}, 2000);
+						} else {
+							// Что-то пошло не так, выводим сообщение об ошибке
+							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>'
+								+ data.errorData);
+						}
+					},
+					error: function() {
+						buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>Невозможно отправить сообщение. '
+								+ "Попробуйте позже");
+					}
+				},
+				{
+					ajax : {
+						// url: "php/mailer.php"
+					}
+				}
+			);
+		}
+	});
+
 	loginForm.submit(function(event) {
 		event.preventDefault(); // Отключаем сабмит
 		if (!formValidator) {
@@ -199,30 +275,4 @@ $(document).ready(function() {
 			$(this).parent().remove();
 		});
 	};
-
-     // обработчик выбора файла для загрузки
-
-     (function(){
-     	$(".file-upload-input").change(function(event){
-     		
-     		// получаем имя файла
-     		if (event.target.value.lastIndexOf('\\')){
-		        var i = event.target.value.lastIndexOf('\\')+1;
-		    }
-		    else{
-		        var i = event.target.value.lastIndexOf('/')+1;
-		    }						
-		    var filename = event.target.value.slice(i);	
-
-		    var placeholderElement = $(this).siblings(".placeholder");
-
-		    placeholderElement
-		    	.removeClass("no-file")
-		    	.addClass("file-selected")
-		    	.text(filename)
-		    	;
-     	});
-
-     })();
-
 });

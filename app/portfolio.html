@@ -107,7 +107,7 @@
  		<div class="title">Добавление проекта</div>
 		<span class="modal_close ico ico-close-form"></span>
 		<div class="content">
-			<form action="#" class="form-validator" method="post">
+			<form action="php/addproject.php" class="form-validator" method="post" id="portfolioForm">
 				<div class="form-block">
 					<label for="portfolio-project-name" class="label">Название проекта</label>
 					<input type="text" id="portfolio-project-name" name="project-name" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Введите название">
@@ -115,7 +115,7 @@
 				<div class="form-block">
 					<label for="portfolio-img" class="label">Картинка проекта</label>
 					<div class="file-upload-input-container">
-						<input type="file" id="portfolio-img" name="img" class="text-input vdg-tooltip file-upload-input" data-validation-type="file" placeholder="Загрузите изображение">
+						<input type="file" id="portfolio-img" name="img" class="text-input vdg-tooltip file-upload-input" data-url="php/addproject.php" data-validation-type="file" placeholder="Загрузите изображение">
 						<div class="placeholder no-file">Загрузите изображение</div>
 					</div>
 				</div>
@@ -136,9 +136,9 @@
 	<div id="overlay"></div>
 
  	<script src="bower/jquery/dist/jquery.js"></script>
- 	<script src="js/vendor/jquery.ui.widget.js"></script>
-	<script src="js/jquery.iframe-transport.js"></script>
-	<script src="js/jquery.fileupload.js"></script>
+ 	<script src="bower/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="bower/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+	<script src="bower/blueimp-file-upload/js/jquery.fileupload.js"></script>
  	<script src="js/my.js"></script>
  </body>
 </html>

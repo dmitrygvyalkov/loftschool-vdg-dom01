@@ -18,6 +18,7 @@ function validator(forms) {
 				break;
 			case "file":
 				_validateFuncFile(validateElement);
+				break;
 			default: // по-умолчанию валидируем как текстовое поле
 				_validateFuncText(validateElement);
 		}
@@ -41,10 +42,12 @@ function validator(forms) {
 		}
 	}
 
+	function _validateFuncFileTest(validateElement) {
+	}
+
 	function _validateFuncFile(validateElement) {
-		var elementVal = (validateElement.value === $(validateElement).attr("placeholder")) ?
-						"" : validateElement.value;
-		if (!elementVal) { // Элемент пустой
+		if (!$("html").data().uploadFilename) { // Элемент пустой
+			console.log("Нет Файла для загрузки");
 			$(validateElement)
 				.addClass("validator-error")
 				.removeClass("no-error")
@@ -56,11 +59,11 @@ function validator(forms) {
 				.addClass("validator-error")
 				;
 		} else {
-			$(validateElement)
+			$(validateElement)	
 				.removeClass("validator-error")
 				.addClass("no-error")
 				.removeAttr("validator-status")
-				.tooltip("hide")
+				.tooltip("hide");
 				;
 			$(validateElement)
 				.parent() // .parent()[0]
