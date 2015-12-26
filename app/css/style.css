@@ -480,5 +480,5 @@ body > .window-info-box {
 	margin-left: -150px;
 	width: 300px;
 	box-sizing: border-box;
-	z-index: 100;
+	z-index: 5010;
 }

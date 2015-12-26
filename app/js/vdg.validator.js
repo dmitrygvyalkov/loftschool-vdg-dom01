@@ -42,8 +42,6 @@ function validator(forms) {
 		}
 	}
 
-	function _validateFuncFileTest(validateElement) {
-	}
 
 	function _validateFuncFile(validateElement) {
 		if (!$("html").data().uploadFilename) { // Элемент пустой

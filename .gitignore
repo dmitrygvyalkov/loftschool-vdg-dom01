@@ -4,3 +4,4 @@ app/php/libs
 app/php/config.php
 composer.phar
 composer.lock
+app/tmp

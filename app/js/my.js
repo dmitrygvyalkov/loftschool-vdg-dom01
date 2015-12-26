@@ -58,18 +58,23 @@ $(document).ready(function() {
         dataType: 'json',
         done: function (e, data) {
         	console.log("Закончилась загрузка файла");
+        	console.log(data);
         },
 
         add: function(e, data) {
+        	console.log("Добавлен файл в загрузку");
+        	console.log(data);
         	$(e.target).siblings(".placeholder")
         					.html(data.files[0].name)
         					.removeClass("no-file");
         	$("html").data("upload-filename", data.files[0].name);
         	$(e.target).keyup();
+        	data.submit();
         },
 
         progressall: function (e, data) {
 	        var progress = parseInt(data.loaded / data.total * 100, 10);
+	        console.log(data);
 	        console.log("Загрузка файла " + progress);
 	        
 	        $('#progress .bar').css(
@@ -79,6 +84,8 @@ $(document).ready(function() {
 	    }
     });
 
+
+
 	portfolioForm.submit(function(event) {
 		event.preventDefault(); // Отключаем сабмит
 		if (!formValidator) {
@@ -87,27 +94,26 @@ $(document).ready(function() {
 		formValidator.validateAllInputs();
 
 		// Проверка на наличие ошибок валидации
+		
+		console.log($(this).find(".validator-error").length);
 		if (!$(this).find(".validator-error").length) {
+			console.log("Посылаем запрос с добавлением проекта на сервер");
 			vdgSubmitFormAjax($(this),
 				{
 					success: function(data) {
+							console.log(data);
 							if (data.status === "success") {
+								
 							// Все отлично, форма отправлена и успешно обработана
 							buildInfoWindow("submit-ok", '<div class="title">Поздравляем!</div>'
-													+ 'Вы вошли как администратор'
-													+ 'Если вас не перенаправит на сайт '
-													+ '<a href="/">Перейдите по ссылке</a>');
+													+ 'Проект успешно добавлен в портфолио'
+													);
 							// Очищаем поля формы
 							var inputs = $(".text-input, .textarea");
 							$.each(inputs, function(key, value) {
 								console.log(value);
 								value.value = "";
 							});
-
-							// Перебрасываем на главную
-							window.setTimeout(function() {
-								$(location).attr('href',"/");
-							}, 2000);
 						} else {
 							// Что-то пошло не так, выводим сообщение об ошибке
 							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>'
