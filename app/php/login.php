@@ -14,6 +14,7 @@ if(($email != $__config["adminEmail"]) || ($password != $__config["adminPassword
                 'errorType' => 'login',
                 'errorData' => "Логин или пароль не соответствуют"
             ), JSON_FORCE_OBJECT );
+	$_SESSION["adminAutorized"] = false;
     exit();
 }
 

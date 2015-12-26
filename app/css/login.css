@@ -34,3 +34,30 @@
 	font-family: 'Open Sans Light';
 
 }
+
+.login-blok .submit-btn {
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	-moz-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 0px 1px rgba(30,116,102,0.5);
+	border: 0;
+	width: 123px;
+	height: 40px;
+	margin: 25px auto 15px;
+	display: block;
+
+	font-family: 'Open Sans Semibold';
+	font-size: 14px;
+	color: rgb(30, 116, 101);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+.login-blok .submit-btn:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}

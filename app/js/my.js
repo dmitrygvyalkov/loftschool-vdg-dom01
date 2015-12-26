@@ -32,7 +32,61 @@ $(document).ready(function() {
 
 	// Обработчик собтия сабмита форм, на который вешаем и валидатор
 	var formValidator;
-	forms.submit(function(event) {
+	var contactForm 	= $("#contact-form"),
+		loginForm		= $("#loginForm"),
+		portfolioForm	= $("#portfolioForm")
+		;
+
+	loginForm.submit(function(event) {
+		event.preventDefault(); // Отключаем сабмит
+		if (!formValidator) {
+			formValidator = new validator($(this));
+		}
+		formValidator.validateAllInputs();
+		// Проверка на наличие ошибок валидации
+		if (!$(this).find(".validator-error").length) {
+			vdgSubmitFormAjax($(this),
+				{
+					success: function(data) {
+							if (data.status === "success") {
+							// Все отлично, форма отправлена и успешно обработана
+							buildInfoWindow("submit-ok", '<div class="title">Поздравляем!</div>'
+													+ 'Вы вошли как администратор'
+													+ 'Если вас не перенаправит на сайт '
+													+ '<a href="/">Перейдите по ссылке</a>');
+							// Очищаем поля формы
+							var inputs = $(".text-input, .textarea");
+							$.each(inputs, function(key, value) {
+								console.log(value);
+								value.value = "";
+							});
+
+							// Перебрасываем на главную
+							window.setTimeout(function() {
+								$(location).attr('href',"/");
+							}, 2000);
+						} else {
+							// Что-то пошло не так, выводим сообщение об ошибке
+							buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>'
+								+ data.errorData);
+						}
+					},
+					error: function() {
+						buildInfoWindow("submit-error", '<div class="title">Ошибка!</div>Невозможно отправить сообщение. '
+								+ "Попробуйте позже");
+					}
+				},
+				{
+					ajax : {
+						// url: "php/mailer.php"
+					}
+				}
+			);
+		}
+	});
+
+
+	contactForm.submit(function(event) {
 		event.preventDefault(); // Отключаем сабмит
 		if (!formValidator) {
 			formValidator = new validator($(this));

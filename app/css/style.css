@@ -458,6 +458,14 @@ i {
 	border: 1px solid #49bb7b;
 }
 
+.window-info-box.submit-ok a {
+	color: #49bb7b;
+}
+
+.window-info-box.submit-ok a:hover {
+	text-decoration: none;
+}
+
 .window-info-box.submit-error {
 	background-color: #e9c8bc;
 	color: #cd7150;
