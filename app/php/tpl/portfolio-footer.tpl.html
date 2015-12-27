@@ -1,0 +1,71 @@
+</ul>
+ 				</section>
+ 			</main>
+
+ 			<div class="block-aside">
+ 				<nav>
+ 					<ul class="nav nav-main">
+ 						<li class="about"><a href="/"><span class="menu-element ">Обо мне</span></a></li>
+ 						<li class="portfolio"><span class="menu-element active">Мои Работы</span></li>
+ 						<li class="contact"><a href="contact.html"><span class="menu-element">Обратная связь</span></a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="contacts">
+ 					<div class="title">Контакты</div>
+ 					<ul class="nav nav-contacts">
+ 						<li class="email"><a href="mailto:dima-mav@yandex.ru"><span class="menu-element">dima-mav@yandex.ru</span></a></li>
+ 						<li class="phone"><a href="tel:+380997930508"><span class="menu-element">+380 99 793-05-08</span></a></li>
+ 						<li class="skype"><a href="skype:dmitrygvyalkov"><span class="menu-element">dmitrygvyalkov</span></a></li>
+ 					</ul>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<footer class="footer">
+			<div class="wrp">
+				<a href="login.html"><span class="login">вход</span></a>
+				
+				<p class="copy">&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</p>
+			</div>
+		</footer>
+ 	</div>
+ 	
+ 	<div id="modal1" class="modal_div">
+ 		<div class="title">Добавление проекта</div>
+		<span class="modal_close ico ico-close-form"></span>
+		<div class="content">
+			<form action="php/addproject.php" class="form-validator" method="post" id="portfolioForm">
+				<div class="form-block">
+					<label for="portfolio-project-name" class="label">Название проекта</label>
+					<input type="text" id="portfolio-project-name" name="project-name" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Введите название">
+				</div>
+				<div class="form-block">
+					<label for="portfolio-img" class="label">Картинка проекта</label>
+					<div class="file-upload-input-container">
+						<input type="file" id="portfolio-img" name="img" class="text-input vdg-tooltip file-upload-input" data-url="php/addproject.php?addimage" data-validation-type="file" placeholder="Загрузите изображение">
+						<div class="placeholder no-file">Загрузите изображение</div>
+					</div>
+				</div>
+				<div class="form-block">
+					<label for="portfolio-url" class="label">URL проекта</label>
+					<input type="text" id="portfolio-url" name="url" class="text-input vdg-tooltipS" data-validation-type="text" placeholder="Добавьте ссылку">
+				</div>
+				<div class="form-block">
+					<label for="portfolio-description" class="label">Описание</label>
+					<textarea type="" id="portfolio-description" name="description" class="text-input vdg-tooltip" data-validation-type="text" placeholder="Пара слов о вашем проекте"></textarea>
+				</div>
+				<div class="form-block">
+					<button type="submit" class="btn">Добавить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="overlay"></div>
+
+ 	<script src="bower/jquery/dist/jquery.js"></script>
+ 	<script src="bower/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="bower/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+	<script src="bower/blueimp-file-upload/js/jquery.fileupload.js"></script>
+ 	<script src="js/my.js"></script>
+ </body>
+</html>

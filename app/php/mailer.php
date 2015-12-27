@@ -2,11 +2,14 @@
 
 session_start();
 
+// Грузим конфиг
+include("./config.php");
+
 // Загружаем библиотеки
 require($__config["libsPath"] . './libs/phpmailer/phpmailer/PHPMailerAutoload.php');
 
-// Грузим конфиг
-include("./config.php");
+
+
 
 // Производим базовую валидацию
 

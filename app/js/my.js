@@ -53,36 +53,38 @@ $(document).ready(function() {
 		;
 
 
-
-	$('#portfolio-img').fileupload({
-        dataType: 'json',
-        done: function (e, data) {
-        	console.log("Закончилась загрузка файла");
-        	console.log(data);
-        },
-
-        add: function(e, data) {
-        	console.log("Добавлен файл в загрузку");
-        	console.log(data);
-        	$(e.target).siblings(".placeholder")
-        					.html(data.files[0].name)
-        					.removeClass("no-file");
-        	$("html").data("upload-filename", data.files[0].name);
-        	$(e.target).keyup();
-        	data.submit();
-        },
-
-        progressall: function (e, data) {
-	        var progress = parseInt(data.loaded / data.total * 100, 10);
-	        console.log(data);
-	        console.log("Загрузка файла " + progress);
-	        
-	        $('#progress .bar').css(
-	            'width',
-	            progress + '%'
-	        );
-	    }
-    });
+	var portfolioImg = $('#portfolio-img');
+	if (portfolioImg.length) {
+		portfolioImg.fileupload({
+	        dataType: 'json',
+	        done: function (e, data) {
+	        	console.log("Закончилась загрузка файла");
+	        	console.log(data);
+	        },
+	
+	        add: function(e, data) {
+	        	console.log("Добавлен файл в загрузку");
+	        	console.log(data);
+	        	$(e.target).siblings(".placeholder")
+	        					.html(data.files[0].name)
+	        					.removeClass("no-file");
+	        	$("html").data("upload-filename", data.files[0].name);
+	        	$(e.target).keyup();
+	        	data.submit();
+	        },
+	
+	        progressall: function (e, data) {
+		        var progress = parseInt(data.loaded / data.total * 100, 10);
+		        console.log(data);
+		        console.log("Загрузка файла " + progress);
+		        
+		        $('#progress .bar').css(
+		            'width',
+		            progress + '%'
+		        );
+		    }
+	    });
+		}
 
 
 
