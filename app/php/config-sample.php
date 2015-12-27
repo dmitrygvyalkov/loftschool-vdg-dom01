@@ -1,13 +1,24 @@
 <?php
 
 	$__config = array(
-			"libsPath" => "./libs/",
-			"destination" => "your@email.com",
-			"destinationName" => "Вася Пупкин",
-			"contactForm" => array(
+			"libsPath" => "./libs/", // путь к директории сторонних php скриптов
+			"uploaddir" => '../tmp/', // папка временной загрузки изображений
+			"destination" => "your@email.com", // Email адресата сообщений
+			"adminEmail" => "your@email.com", // Административный адрес для админки
+			"adminPassword" => md5("adminPassword"), // пароль в админку
+			"destinationName" => "Вася Пупкин", // Имя адресата
+			"contactForm" => array( // Тема сообщений с сайта
 					"subjectMail" => "Обратная связь с сайта"
+				),
+			"mysql"	=> array( // конфигурация БД
+					"host" => "localhost",
+					"user" => "dbuser",
+					"password" => "db-password",
+					"database" => "db-name"
 				)
 		);
+
+
 
 	$__smtp = array(
 			"host" => "smtp.yandex.ru", //smtp сервер
